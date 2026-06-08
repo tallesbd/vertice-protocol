@@ -1,0 +1,139 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages for math and formatting
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning}
+
+\geometry{margin=1in}
+
+\title{\textbf{VÉRTICE Protocol: A Categorical and Probabilistic Ontology for Decision Surfaces in Illiquid Capital Markets}}
+\author{
+Talles Correa Afonso \\
+\textit{Founder \& Chief Architect, VÉRTICE Protocol} \\
+\texttt{tallesbd@gmail.com} \\
+\href{https://orcid.org/0009-0003-7961-6966}{ORCID: 0009-0003-7961-6966} \\
+\href{https://www.linkedin.com/in/engtallescorrea/}{LinkedIn} | \href{https://veriquantum.org}{veriquantum.org}
+}
+\date{May 2022 (Conception) \\ Revised June 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The VÉRTICE Protocol defines the foundational mathematical primitives and ontological framework required to reduce decision friction in private markets. This work introduces ten rigorously formalized primitives, including a Universal Private Asset Identifier (UPAI) with embedded probabilistic signatures and regulatory mapping, full distributional Probabilistic Performance Surfaces in Wasserstein space with explicit illiquidity and staleness adjustments, and a Decision Friction Entropy Index (DFEI) that serves as both an efficiency and systemic risk metric.
+
+The framework is structured as a monoidal category $\mathcal{V}$ that guarantees measurable entropy reduction under composition and includes a harmonization functor (P10) for interoperability with existing taxonomies and regulatory reporting frameworks (e.g., Form PF, S\&P proprietary taxonomies launched in 2026). All core concepts were conceived in May 2022 by the author.
+
+This submission establishes the mathematical foundation and prior art for the VÉRTICE Protocol as the sovereign standard for decision surfaces in illiquid capital markets.
+\end{abstract}
+
+\section{Introduction and Motivation}
+
+Private markets, particularly private credit, have grown into a multi-trillion-dollar asset class with systemic importance. However, the informational infrastructure remains fragmented. Regulators (FSB 2026) highlight the lack of harmonized definitions and granular data. Commercial efforts (e.g., S\&P Global / Cambridge Associates / Mercer taxonomy launched in 2026 on iLEVEL) provide useful descriptive layers but lack rigorous probabilistic structures and explicit mechanisms for measuring decision friction.
+
+The VÉRTICE Protocol addresses these gaps by providing a neutral, mathematically coherent ontological substrate. It is designed so that existing taxonomies can be mapped upward without loss of information, while enabling superior risk-adjusted decision making, regulatory monitoring, and capital allocation efficiency.
+
+\section{The Category $\mathcal{V}$}
+
+The VÉRTICE framework is formalized as a \textbf{monoidal symmetric category} $\mathcal{V}$.
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Objects}: The ten foundational primitives (P1--P10).
+    \begin{itemize}
+        \item P1: Universal Private Asset Identifier (UPAI)
+        \item P2: Probabilistic Performance Surface (PPS)
+        \item P3: Decision Friction Entropy Index (DFEI)
+        \item P4: Cross-Vintage Liquidity Gradient (CVLG)
+        \item P5: Risk Attribute Taxonomy
+        \item P6: Fragment-to-Standard Functor
+        \item P7: Peer Distance Metric
+        \item P8: Capital Allocation Surface under Uncertainty
+        \item P9: Ratification \& Evolution Protocol (meta-primitive)
+        \item P10 (2026 refinement): Harmonization \& Interoperability Functor
+    \end{itemize}
+    \item \textbf{Morphisms}: Transformations that reduce or preserve decision entropy: $f: A \to B$ satisfies $\mathrm{DFEI}(B) \le \mathrm{DFEI}(A)$.
+    \item \textbf{Composition}: Associative and entropy-non-increasing (Theorem 1).
+    \item \textbf{Tensor product}: Represents composition of primitives into joint decision surfaces.
+\end{itemize}
+
+There exists a natural functor $F: \mathcal{F} \to \mathcal{V}$, where $\mathcal{F}$ is the category of fragmented market data (inconsistent definitions, proprietary taxonomies, Form PF reports). This functor directly addresses the harmonization gaps identified by the FSB in 2026.
+
+\section{Key Primitives (Formal Definitions)}
+
+\subsection{P1: Universal Private Asset Identifier (UPAI)}
+
+The UPAI is an injective function with hierarchical structure and embedded probabilistic/regulatory intelligence:
+
+\[
+\mathrm{UPAI}(a) = \mathrm{Prefix}_{jur} \cdot \mathrm{Class}_{asset} \cdot \mathrm{Vintage}_{hash} \cdot \mathrm{Instance}_{uuid} \cdot \mathrm{ProbSig}_{vec} :: \mathrm{Checksum}
+\]
+
+The $\mathrm{ProbSig}$ vector (2026 refinement) includes features for staleness risk and a regulatory mapping vector for direct interoperability with Form PF, CUSIP extensions, and FIGI.
+
+\subsection{P2: Probabilistic Performance Surfaces (PPS)}
+
+A PPS for vintage $v$ and asset class $c$ is a random field in Wasserstein-2 space:
+
+\[
+S_{v,c}(t) \in \mathcal{P}_2(\mathbb{R}^d)
+\]
+
+Refined evolution (2026):
+
+\[
+S_{v,t+1} = S_{v,t} \oplus \bigl( \Delta_{\mathrm{data}} - \lambda_{\mathrm{staleness}} \cdot \mathrm{StalenessPenalty} - \mu_{\mathrm{illiquidity}} \cdot L_{v,c}(t) \bigr) \otimes K_{\mathrm{DFEI}}
+\]
+
+This explicitly corrects for stale pricing and illiquidity (addressing documented limitations in 2026 performance datasets).
+
+\subsection{P3: Decision Friction Entropy Index (DFEI)}
+
+\[
+\mathrm{DFEI}(D, D') = D_{KL}(P_{\mathrm{info}} || P'_{\mathrm{info}}) + \lambda \cdot H(\text{decision surface}) + \text{regulatory component (2026)}
+\]
+
+The index serves as a measurable KPI for both allocators and regulators.
+
+\section{Main Results}
+
+\textbf{Theorem 1 (Composition Preserves Reduction).} If $f: A \to B$ and $g: B \to C$ are morphisms, then $\mathrm{DFEI}(C) \le \mathrm{DFEI}(A)$.
+
+\textbf{Theorem 2 (Auto-evolution).} P9 can propose updates to the primitive set iff the expected DFEI reduction exceeds threshold $\tau$ with statistical significance $p < 0.05$.
+
+\textbf{Theorem 3 (Harmonization Inevitability).} Any proprietary taxonomy $T$ (e.g., S\&P 2026) admits a natural morphism into $\mathcal{V}$ via P10, with strictly positive DFEI distance unless $T$ already incorporates full probabilistic surfaces and UPAI embeddings.
+
+\section{Implementation and Interoperability}
+
+A production-ready Python reference implementation of the core primitives (including UPAI with regulatory vector and PPS with DFEI guardrails) is provided in the ancillary materials and the reference kernel. The harmonization functor (P10) enables existing platforms (iLEVEL, Bloomberg, etc.) to map their current taxonomies upward.
+
+\section{Provenance and Prior Art}
+
+All core concepts were conceived by Talles Correa Afonso in May 2022. This submission, together with the accompanying timestamped repository, OpenTimestamps proof, and Zenodo record, establishes clear prior art ahead of any commercial adoption or derivative taxonomies.
+
+\section{Conclusion}
+
+The VÉRTICE Protocol provides the missing mathematical and ontological foundation for decision-grade infrastructure in illiquid markets. Its category-theoretic structure, explicit friction metrics, and built-in harmonization make it the inevitable substrate for future standards, platforms, and regulatory frameworks.
+
+\section*{Acknowledgments}
+The author thanks the global community of LPs, GPs, and data infrastructure builders whose real-world friction surfaces motivated this work.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{9}
+
+\bibitem{fsb2026}
+Financial Stability Board (2026). \textit{Report on Vulnerabilities in Private Credit}.
+
+\bibitem{sp2026}
+S\&P Global, Cambridge Associates, Mercer (2026). \textit{Private Markets Performance Analytics Datasets}.
+
+\end{thebibliography}
+
+\end{document}

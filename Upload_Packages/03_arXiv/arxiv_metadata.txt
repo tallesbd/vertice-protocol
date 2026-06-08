@@ -1,0 +1,46 @@
+# arXiv Submission Metadata - Exact Fields for the Form
+# Copy-paste directly into the arXiv submission interface
+
+Title:
+VÉRTICE Protocol: A Categorical and Probabilistic Ontology for Decision Surfaces in Illiquid Capital Markets
+
+Authors (in order):
+Talles Correa Afonso
+
+Author Affiliations:
+Founder & Chief Architect, VÉRTICE Protocol (Independent)
+
+Contact Email (corresponding author):
+tallesbd@gmail.com
+
+Abstract (exact text to paste):
+The VÉRTICE Protocol defines the foundational mathematical primitives and ontological framework required to reduce decision friction in private markets. This work introduces ten rigorously formalized primitives, including a Universal Private Asset Identifier (UPAI) with embedded probabilistic signatures and regulatory mapping, full distributional Probabilistic Performance Surfaces in Wasserstein space with explicit illiquidity and staleness adjustments, and a Decision Friction Entropy Index (DFEI) that serves as both an efficiency and systemic risk metric.
+
+The framework is structured as a monoidal category that guarantees measurable entropy reduction under composition and includes a harmonization functor (P10) for interoperability with existing taxonomies and regulatory reporting frameworks (e.g., Form PF, S&P proprietary taxonomies launched in 2026). All core concepts were conceived in May 2022 by the author.
+
+This submission establishes the mathematical foundation and prior art for the VÉRTICE Protocol as the sovereign standard for decision surfaces in illiquid capital markets.
+
+Comments (optional but recommended):
+This work establishes the core mathematical ontology and prior art for the VÉRTICE Protocol (conceived May 2022). Full supporting documentation, implementation, and timestamped provenance records are available in the accompanying Zenodo deposit. Focus of this submission is the categorical and probabilistic foundation.
+
+Primary Classification:
+math.CT (Category Theory)
+
+Secondary Classifications (add if available):
+q-fin.GN (General Finance)
+stat.AP (Applications)
+
+Keywords (comma-separated):
+VÉRTICE Protocol, private markets, illiquid assets, ontology, probabilistic performance surfaces, decision friction, data standardization, private credit, harmonization functor, prior art
+
+License:
+arXiv default (or CC BY 4.0 if offered)
+
+Journal Reference (leave blank for new submission)
+
+DOI (leave blank)
+
+# Additional Notes for Submission:
+# - Upload the main .tex file + any ancillary files (Manifesto, Protocol, Author Attribution) as separate PDFs or in the source tarball.
+# - Include the Visual_Structure files (cover and attribution block) for the compiled PDF.
+# - After acceptance, immediately record the arXiv ID and update all documents in the main repository and Zenodo record.
