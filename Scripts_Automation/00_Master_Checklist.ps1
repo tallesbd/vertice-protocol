@@ -1,7 +1,0 @@
-﻿Write-Host "=== VÉRTICE Automated Publication Checklist ==="
-Write-Host "1. Git signed + tagged: Run 01_Git_Signed_Release.ps1"
-Write-Host "2. OpenTimestamps: Run 02_OpenTimestamps.ps1 (after zip ready)"
-Write-Host "3. arXiv: Use files in Upload_Packages/03_arXiv/ + compile in Overleaf"
-Write-Host "4. Zenodo: Use Upload_Packages/04_Zenodo/ after arXiv ID"
-Write-Host "5. Remote: Provide Overleaf link for live sync"
-Write-Host "Current engineered probability: 92-95%+"
